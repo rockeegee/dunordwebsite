@@ -1,219 +1,203 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DuNord Digital — Professional websites for local businesses</title>
+<meta name="description" content="DuNord Digital builds fast, affordable one-page websites for local service businesses in Minneapolis, St. Paul, and nationwide. $399 setup, $99/month.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#111;background:#fff;}
+a{color:inherit;text-decoration:none;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 2rem;border-bottom:1px solid #e5e5e5;}
+.logo{font-size:15px;font-weight:600;letter-spacing:-0.01em;}
+.nav-cta{font-size:13px;padding:7px 18px;border-radius:8px;cursor:pointer;color:#f5f5f5;background:#111;border:none;font-weight:500;}
+.hero{text-align:center;padding:4rem 2rem 3rem;max-width:620px;margin:0 auto;}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#888;margin-bottom:1rem;}
+.hero h1{font-size:38px;font-weight:600;line-height:1.15;letter-spacing:-0.025em;margin-bottom:1rem;}
+.hero p{font-size:16px;color:#555;line-height:1.6;margin-bottom:2rem;}
+.btn-primary{background:#111;color:#f5f5f5;font-size:14px;font-weight:500;padding:10px 24px;border-radius:8px;border:none;cursor:pointer;display:inline-block;}
+hr.div{border:none;border-top:1px solid #e5e5e5;margin:0 2rem;}
+.section{padding:3rem 2rem;max-width:860px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#aaa;margin-bottom:0.5rem;}
+.section h2{font-size:22px;font-weight:600;margin-bottom:0.5rem;}
+.section .sub{font-size:15px;color:#666;margin-bottom:2rem;line-height:1.6;}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e5e5e5;border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;}
+.step{background:#fff;padding:1.25rem;}
+.step-num{font-size:11px;font-weight:500;color:#aaa;margin-bottom:8px;}
+.step-title{font-size:14px;font-weight:600;margin-bottom:4px;}
+.step-desc{font-size:13px;color:#666;line-height:1.5;}
+.calc-card{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:1.5rem;}
+.calc-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #e5e5e5;gap:12px;}
+.calc-label{font-size:14px;color:#666;flex-shrink:0;}
+.calc-val{font-size:14px;font-weight:500;}
+.calc-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #ccc;}
+.calc-total-label{font-size:13px;color:#666;}
+.calc-total-val{font-size:28px;font-weight:600;letter-spacing:-0.02em;}
+.calc-sub{font-size:12px;color:#aaa;margin-top:4px;}
+.toggle-btn{font-size:12px;padding:4px 12px;border-radius:8px;border:1px solid #ccc;background:transparent;cursor:pointer;color:#666;}
+.toggle-btn.active{background:#111;color:#f5f5f5;border-color:#111;}
+.compare-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e5e5e5;border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;margin-bottom:1rem;}
+.compare-cell{background:#fff;padding:1rem 1.25rem;}
+.compare-cell.header{background:#f5f5f5;}
+.compare-cell.highlight{background:#111;}
+.compare-header{font-size:11px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:#aaa;}
+.compare-name{font-size:14px;font-weight:500;margin-top:2px;}
+.compare-price{font-size:22px;font-weight:600;letter-spacing:-0.02em;margin:8px 0 2px;}
+.compare-mo{font-size:12px;color:#aaa;}
+.compare-savings{display:inline-block;font-size:12px;font-weight:500;padding:3px 10px;border-radius:8px;background:#f5f5f5;color:#111;margin-top:6px;}
+.savings-note{font-size:13px;color:#666;line-height:1.6;}
+.savings-note strong{font-weight:600;color:#111;}
+.example-card{border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;}
+.example-bar{background:#f5f5f5;padding:10px 16px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #e5e5e5;}
+.dot{width:10px;height:10px;border-radius:50%;background:#ccc;}
+.example-url{font-size:12px;color:#aaa;margin-left:8px;}
+.example-inner{padding:2rem;text-align:center;background:#fafafa;}
+.example-inner h3{font-size:20px;font-weight:600;margin-bottom:0.5rem;}
+.example-inner p{font-size:13px;color:#666;margin-bottom:1rem;}
+.example-chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+.chip{font-size:12px;padding:4px 12px;border-radius:99px;border:1px solid #e5e5e5;background:#fff;color:#666;}
+.faq{display:flex;flex-direction:column;border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;}
+.faq-item{padding:1rem 1.25rem;border-bottom:1px solid #e5e5e5;cursor:pointer;background:#fff;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-size:14px;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-a{font-size:13px;color:#666;line-height:1.6;margin-top:8px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.arrow{font-size:16px;color:#aaa;transition:transform 0.15s;display:inline-block;flex-shrink:0;}
+.faq-item.open .arrow{transform:rotate(45deg);}
+.cta-section{text-align:center;padding:3rem 2rem 4rem;background:#111;margin-top:3rem;}
+.cta-section h2{font-size:22px;font-weight:600;color:#f5f5f5;margin-bottom:0.75rem;}
+.cta-section p{font-size:15px;color:#999;margin-bottom:1.5rem;}
+.btn-white{background:#f5f5f5;color:#111;font-size:15px;font-weight:500;padding:12px 32px;border-radius:8px;border:none;cursor:pointer;}
+footer{padding:1.25rem 2rem;border-top:1px solid #e5e5e5;display:flex;justify-content:space-between;}
+footer p{font-size:12px;color:#aaa;}
+@media(max-width:600px){
+  .hero h1{font-size:28px;}
+  .steps{grid-template-columns:1fr;}
+  .compare-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;title&gt;DuNord Digital — Professional websites for local businesses&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta name="description" content="DuNord Digital builds fast, affordable one-page websites for local service businesses in Minneapolis, St. Paul, and nationwide. $399 setup, $99/month."&gt;</span></p>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p1"><span class="s1">*{box-sizing:border-box;margin:0;padding:0;}</span></p>
-<p class="p1"><span class="s1">body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#111;background:#fff;}</span></p>
-<p class="p1"><span class="s1">a{color:inherit;text-decoration:none;}</span></p>
-<p class="p1"><span class="s1">.nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 2rem;border-bottom:1px solid #e5e5e5;}</span></p>
-<p class="p1"><span class="s1">.logo{font-size:15px;font-weight:600;letter-spacing:-0.01em;}</span></p>
-<p class="p1"><span class="s1">.nav-cta{font-size:13px;padding:7px 18px;border-radius:8px;cursor:pointer;color:#f5f5f5;background:#111;border:none;font-weight:500;}</span></p>
-<p class="p1"><span class="s1">.hero{text-align:center;padding:4rem 2rem 3rem;max-width:620px;margin:0 auto;}</span></p>
-<p class="p1"><span class="s1">.eyebrow{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#888;margin-bottom:1rem;}</span></p>
-<p class="p1"><span class="s1">.hero h1{font-size:38px;font-weight:600;line-height:1.15;letter-spacing:-0.025em;margin-bottom:1rem;}</span></p>
-<p class="p1"><span class="s1">.hero p{font-size:16px;color:#555;line-height:1.6;margin-bottom:2rem;}</span></p>
-<p class="p1"><span class="s1">.btn-primary{background:#111;color:#f5f5f5;font-size:14px;font-weight:500;padding:10px 24px;border-radius:8px;border:none;cursor:pointer;display:inline-block;}</span></p>
-<p class="p1"><span class="s1">hr.div{border:none;border-top:1px solid #e5e5e5;margin:0 2rem;}</span></p>
-<p class="p1"><span class="s1">.section{padding:3rem 2rem;max-width:860px;margin:0 auto;}</span></p>
-<p class="p1"><span class="s1">.section-label{font-size:11px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#aaa;margin-bottom:0.5rem;}</span></p>
-<p class="p1"><span class="s1">.section h2{font-size:22px;font-weight:600;margin-bottom:0.5rem;}</span></p>
-<p class="p1"><span class="s1">.section .sub{font-size:15px;color:#666;margin-bottom:2rem;line-height:1.6;}</span></p>
-<p class="p1"><span class="s1">.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e5e5e5;border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;}</span></p>
-<p class="p1"><span class="s1">.step{background:#fff;padding:1.25rem;}</span></p>
-<p class="p1"><span class="s1">.step-num{font-size:11px;font-weight:500;color:#aaa;margin-bottom:8px;}</span></p>
-<p class="p1"><span class="s1">.step-title{font-size:14px;font-weight:600;margin-bottom:4px;}</span></p>
-<p class="p1"><span class="s1">.step-desc{font-size:13px;color:#666;line-height:1.5;}</span></p>
-<p class="p1"><span class="s1">.calc-card{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:1.5rem;}</span></p>
-<p class="p1"><span class="s1">.calc-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #e5e5e5;gap:12px;}</span></p>
-<p class="p1"><span class="s1">.calc-label{font-size:14px;color:#666;flex-shrink:0;}</span></p>
-<p class="p1"><span class="s1">.calc-val{font-size:14px;font-weight:500;}</span></p>
-<p class="p1"><span class="s1">.calc-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #ccc;}</span></p>
-<p class="p1"><span class="s1">.calc-total-label{font-size:13px;color:#666;}</span></p>
-<p class="p1"><span class="s1">.calc-total-val{font-size:28px;font-weight:600;letter-spacing:-0.02em;}</span></p>
-<p class="p1"><span class="s1">.calc-sub{font-size:12px;color:#aaa;margin-top:4px;}</span></p>
-<p class="p1"><span class="s1">.toggle-btn{font-size:12px;padding:4px 12px;border-radius:8px;border:1px solid #ccc;background:transparent;cursor:pointer;color:#666;}</span></p>
-<p class="p1"><span class="s1">.toggle-btn.active{background:#111;color:#f5f5f5;border-color:#111;}</span></p>
-<p class="p1"><span class="s1">.compare-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e5e5e5;border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;margin-bottom:1rem;}</span></p>
-<p class="p1"><span class="s1">.compare-cell{background:#fff;padding:1rem 1.25rem;}</span></p>
-<p class="p1"><span class="s1">.compare-cell.header{background:#f5f5f5;}</span></p>
-<p class="p1"><span class="s1">.compare-cell.highlight{background:#111;}</span></p>
-<p class="p1"><span class="s1">.compare-header{font-size:11px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:#aaa;}</span></p>
-<p class="p1"><span class="s1">.compare-name{font-size:14px;font-weight:500;margin-top:2px;}</span></p>
-<p class="p1"><span class="s1">.compare-price{font-size:22px;font-weight:600;letter-spacing:-0.02em;margin:8px 0 2px;}</span></p>
-<p class="p1"><span class="s1">.compare-mo{font-size:12px;color:#aaa;}</span></p>
-<p class="p1"><span class="s1">.compare-savings{display:inline-block;font-size:12px;font-weight:500;padding:3px 10px;border-radius:8px;background:#f5f5f5;color:#111;margin-top:6px;}</span></p>
-<p class="p1"><span class="s1">.savings-note{font-size:13px;color:#666;line-height:1.6;}</span></p>
-<p class="p1"><span class="s1">.savings-note strong{font-weight:600;color:#111;}</span></p>
-<p class="p1"><span class="s1">.example-card{border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;}</span></p>
-<p class="p1"><span class="s1">.example-bar{background:#f5f5f5;padding:10px 16px;display:flex;align-items:center;gap:6px;border-bottom:1px solid #e5e5e5;}</span></p>
-<p class="p1"><span class="s1">.dot{width:10px;height:10px;border-radius:50%;background:#ccc;}</span></p>
-<p class="p1"><span class="s1">.example-url{font-size:12px;color:#aaa;margin-left:8px;}</span></p>
-<p class="p1"><span class="s1">.example-inner{padding:2rem;text-align:center;background:#fafafa;}</span></p>
-<p class="p1"><span class="s1">.example-inner h3{font-size:20px;font-weight:600;margin-bottom:0.5rem;}</span></p>
-<p class="p1"><span class="s1">.example-inner p{font-size:13px;color:#666;margin-bottom:1rem;}</span></p>
-<p class="p1"><span class="s1">.example-chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}</span></p>
-<p class="p1"><span class="s1">.chip{font-size:12px;padding:4px 12px;border-radius:99px;border:1px solid #e5e5e5;background:#fff;color:#666;}</span></p>
-<p class="p1"><span class="s1">.faq{display:flex;flex-direction:column;border:1px solid #e5e5e5;border-radius:12px;overflow:hidden;}</span></p>
-<p class="p1"><span class="s1">.faq-item{padding:1rem 1.25rem;border-bottom:1px solid #e5e5e5;cursor:pointer;background:#fff;}</span></p>
-<p class="p1"><span class="s1">.faq-item:last-child{border-bottom:none;}</span></p>
-<p class="p1"><span class="s1">.faq-q{font-size:14px;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:12px;}</span></p>
-<p class="p1"><span class="s1">.faq-a{font-size:13px;color:#666;line-height:1.6;margin-top:8px;display:none;}</span></p>
-<p class="p1"><span class="s1">.faq-item.open .faq-a{display:block;}</span></p>
-<p class="p1"><span class="s1">.arrow{font-size:16px;color:#aaa;transition:transform 0.15s;display:inline-block;flex-shrink:0;}</span></p>
-<p class="p1"><span class="s1">.faq-item.open .arrow{transform:rotate(45deg);}</span></p>
-<p class="p1"><span class="s1">.cta-section{text-align:center;padding:3rem 2rem 4rem;background:#111;margin-top:3rem;}</span></p>
-<p class="p1"><span class="s1">.cta-section h2{font-size:22px;font-weight:600;color:#f5f5f5;margin-bottom:0.75rem;}</span></p>
-<p class="p1"><span class="s1">.cta-section p{font-size:15px;color:#999;margin-bottom:1.5rem;}</span></p>
-<p class="p1"><span class="s1">.btn-white{background:#f5f5f5;color:#111;font-size:15px;font-weight:500;padding:12px 32px;border-radius:8px;border:none;cursor:pointer;}</span></p>
-<p class="p1"><span class="s1">footer{padding:1.25rem 2rem;border-top:1px solid #e5e5e5;display:flex;justify-content:space-between;}</span></p>
-<p class="p1"><span class="s1">footer p{font-size:12px;color:#aaa;}</span></p>
-<p class="p1"><span class="s1">@media(max-width:600px){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero h1{font-size:28px;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.steps{grid-template-columns:1fr;}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.compare-grid{grid-template-columns:1fr;}</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;nav class="nav"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="logo"&gt;DuNord Digital&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;button class="nav-cta" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})"&gt;Get started &amp;rarr;&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/nav&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="hero"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="eyebrow"&gt;Minneapolis &amp;middot; St. Paul &amp;middot; Nationwide&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Your business deserves to be found.&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;We build fast, professional websites for local service businesses. No tech knowledge needed &amp;mdash; just 10 minutes of your time.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;button class="btn-primary" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})"&gt;Get your website for $399 &amp;rarr;&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;hr class="div"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-label"&gt;How it works&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Live in 3&amp;ndash;5 business days.&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="sub"&gt;Three steps. Completely hands-off for you.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="steps"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="step"&gt;&lt;div class="step-num"&gt;01&lt;/div&gt;&lt;div class="step-title"&gt;Pay &amp;amp; check out&lt;/div&gt;&lt;div class="step-desc"&gt;Simple online checkout. No contracts.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="step"&gt;&lt;div class="step-num"&gt;02&lt;/div&gt;&lt;div class="step-title"&gt;Fill out one form&lt;/div&gt;&lt;div class="step-desc"&gt;Tell us about your business in ~10 minutes.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="step"&gt;&lt;div class="step-num"&gt;03&lt;/div&gt;&lt;div class="step-title"&gt;We launch it&lt;/div&gt;&lt;div class="step-desc"&gt;We build, review, and go live within 3&amp;ndash;5 business days.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;hr class="div"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-label"&gt;Pricing calculator&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;See exactly what you'll pay.&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="sub"&gt;No hidden fees. Toggle the domain to fit your needs.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="calc-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="calc-row"&gt;&lt;span class="calc-label"&gt;Website setup&lt;/span&gt;&lt;span class="calc-val"&gt;$399 one-time&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="calc-row"&gt;&lt;span class="calc-label"&gt;Monthly hosting &amp;amp; support&lt;/span&gt;&lt;span class="calc-val"&gt;$99 / month&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="calc-row" style="border-bottom:none;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;span class="calc-label"&gt;Custom domain &lt;span style="font-size:12px;color:#aaa;"&gt;(optional, one-time)&lt;/span&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;gap:6px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="domain-no" class="toggle-btn" onclick="toggleDomain(false)"&gt;No thanks&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="domain-yes" class="toggle-btn active" onclick="toggleDomain(true)"&gt;Add $100&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="calc-total"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="calc-total-label"&gt;Year one total&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="calc-sub" id="calc-breakdown"&gt;$399 setup + $100 domain + $1,188 hosting&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="calc-total-val" id="calc-total"&gt;$1,687&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;hr class="div"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-label"&gt;Value comparison&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;A fraction of the typical cost.&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="sub"&gt;Most web agencies charge premium prices for features most small businesses simply don&amp;rsquo;t need.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="compare-grid"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell header"&gt;&lt;div class="compare-header"&gt;Provider&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell header"&gt;&lt;div class="compare-header"&gt;Setup fee&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell header"&gt;&lt;div class="compare-header"&gt;Monthly cost&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell"&gt;&lt;div class="compare-name" style="color:#666;"&gt;Typical agency&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell"&gt;&lt;div class="compare-price" style="color:#666;"&gt;$2,500&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell"&gt;&lt;div class="compare-price" style="color:#666;"&gt;$350&amp;ndash;$500&lt;/div&gt;&lt;div class="compare-mo"&gt;per month&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell highlight"&gt;&lt;div class="compare-header" style="color:#999;"&gt;DuNord Digital&lt;/div&gt;&lt;div class="compare-savings"&gt;Save $2,100+ upfront&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell highlight"&gt;&lt;div class="compare-price" style="color:#f5f5f5;"&gt;$399&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="compare-cell highlight"&gt;&lt;div class="compare-price" style="color:#f5f5f5;"&gt;$99&lt;/div&gt;&lt;div class="compare-mo" style="color:#999;"&gt;per month&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="savings-note"&gt;That&amp;rsquo;s up to &lt;strong&gt;$2,100 saved on setup&lt;/strong&gt; and &lt;strong&gt;$3,000+ saved per year&lt;/strong&gt; on hosting &amp;mdash; without sacrificing the credibility and quality your business needs to compete online.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;hr class="div"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-label"&gt;You&amp;rsquo;re looking at it&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;This is what we build.&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p class="sub"&gt;The page you&amp;rsquo;re reading right now is built the same way we&amp;rsquo;d build yours &amp;mdash; clean, fast, and professional. No bloat, no fuss.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="example-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="example-bar"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;span class="example-url"&gt;dunorddigital.com&lt;/span&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="example-inner"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h3&gt;DuNord Digital&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Simple, credible, effective. Exactly what your customers need to trust you and make the call.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="example-chips"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span class="chip"&gt;Services listed&lt;/span&gt;&lt;span class="chip"&gt;Pricing info&lt;/span&gt;&lt;span class="chip"&gt;Mobile-friendly&lt;/span&gt;&lt;span class="chip"&gt;Contact info&lt;/span&gt;&lt;span class="chip"&gt;Custom domain&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;hr class="div"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="section-label"&gt;FAQ&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Common questions.&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="faq" style="margin-top:1.5rem;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="faq-item open" onclick="toggleFaq(this)"&gt;&lt;div class="faq-q"&gt;How long does it take to get my site live? &lt;span class="arrow"&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a"&gt;Most sites go live within 3&amp;ndash;5 business days of receiving your completed intake form. If revisions are needed, we handle those quickly too.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="faq-item" onclick="toggleFaq(this)"&gt;&lt;div class="faq-q"&gt;Why is DuNord so much cheaper than other agencies? &lt;span class="arrow"&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a"&gt;Most agencies charge for complexity you don&amp;rsquo;t need &amp;mdash; custom animations, e-commerce systems, blogging platforms, and ongoing strategy calls. Research consistently shows that for local service businesses, the fundamentals drive the highest ROI: a clean design, your services and pricing, a phone number, and a professional domain. Those are the things that make a customer trust you and pick up the phone. We&amp;rsquo;ve refined our entire process around delivering exactly those fundamentals &amp;mdash; efficiently, and at a price that actually makes sense for a small business.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="faq-item" onclick="toggleFaq(this)"&gt;&lt;div class="faq-q"&gt;Do I need to provide anything? &lt;span class="arrow"&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a"&gt;Just fill out our short intake form &amp;mdash; it covers your business name, services, pricing, logo (if you have one), and any photos. That&amp;rsquo;s it. Takes about 10 minutes.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="faq-item" onclick="toggleFaq(this)"&gt;&lt;div class="faq-q"&gt;What if I want changes after launch? &lt;span class="arrow"&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a"&gt;Small text and content updates are included in the $99/month plan &amp;mdash; things like updating your hours, adding a service, or tweaking pricing. Larger changes such as a redesign or significant structural updates will be quoted at an hourly rate.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="faq-item" onclick="toggleFaq(this)"&gt;&lt;div class="faq-q"&gt;Can I cancel the monthly plan? &lt;span class="arrow"&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a"&gt;Yes &amp;mdash; no long-term contracts, cancel any time. If you purchased a custom domain, that stays yours. Please note that the website itself is built and maintained by DuNord Digital &amp;mdash; site files are not transferable upon cancellation. If you&amp;rsquo;d like to continue having a website after cancelling, you&amp;rsquo;re always welcome to restart the plan.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="faq-item" onclick="toggleFaq(this)"&gt;&lt;div class="faq-q"&gt;Do I need a custom domain? &lt;span class="arrow"&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class="faq-a"&gt;Not required, but strongly recommended. A custom domain like YourBusiness.com looks far more professional and helps customers find you through Google. It&amp;rsquo;s a one-time $100 fee &amp;mdash; we handle all the setup.&lt;/div&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="cta-section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Ready to get online?&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;Takes less than 10 minutes to get started. Live in 3&amp;ndash;5 business days.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;button class="btn-white"&gt;Get your website for $399 &amp;rarr;&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;&amp;copy; 2026 DuNord Digital. Minneapolis, MN.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p&gt;dunorddigital.com&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
-<p class="p1"><span class="s1">&lt;script&gt;</span></p>
-<p class="p1"><span class="s1">var hasDomain=true;</span></p>
-<p class="p1"><span class="s1">function toggleDomain(val){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>hasDomain=val;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById('domain-yes').className='toggle-btn'+(val?' active':'');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById('domain-no').className='toggle-btn'+(!val?' active':'');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>var total=399+1188+(val?100:0);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>var parts=['$399 setup'];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>if(val)parts.push('$100 domain');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>parts.push('$1,188 hosting');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById('calc-total').textContent='$'+total.toLocaleString();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById('calc-breakdown').textContent=parts.join(' + ');</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">function toggleFaq(el){</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>var isOpen=el.classList.contains('open');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>if(!isOpen)el.classList.add('open');</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+<nav class="nav">
+  <div class="logo">DuNord Digital</div>
+  <button class="nav-cta" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})">Get started &rarr;</button>
+</nav>
+<div class="hero">
+  <div class="eyebrow">Minneapolis &middot; St. Paul &middot; Nationwide</div>
+  <h1>Your business deserves to be found.</h1>
+  <p>We build fast, professional websites for local service businesses. No tech knowledge needed &mdash; just 10 minutes of your time.</p>
+  <button class="btn-primary" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})">Get your website for $399 &rarr;</button>
+</div>
+<hr class="div">
+<div class="section">
+  <div class="section-label">How it works</div>
+  <h2>Live in 3&ndash;5 business days.</h2>
+  <p class="sub">Three steps. Completely hands-off for you.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">01</div><div class="step-title">Pay &amp; check out</div><div class="step-desc">Simple online checkout. No contracts.</div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-title">Fill out one form</div><div class="step-desc">Tell us about your business in ~10 minutes.</div></div>
+    <div class="step"><div class="step-num">03</div><div class="step-title">We launch it</div><div class="step-desc">We build, review, and go live within 3&ndash;5 business days.</div></div>
+  </div>
+</div>
+<hr class="div">
+<div class="section">
+  <div class="section-label">Pricing calculator</div>
+  <h2>See exactly what you'll pay.</h2>
+  <p class="sub">No hidden fees. Toggle the domain to fit your needs.</p>
+  <div class="calc-card">
+    <div class="calc-row"><span class="calc-label">Website setup</span><span class="calc-val">$399 one-time</span></div>
+    <div class="calc-row"><span class="calc-label">Monthly hosting &amp; support</span><span class="calc-val">$99 / month</span></div>
+    <div class="calc-row" style="border-bottom:none;">
+      <span class="calc-label">Custom domain <span style="font-size:12px;color:#aaa;">(optional, one-time)</span></span>
+      <div style="display:flex;gap:6px;">
+        <button id="domain-no" class="toggle-btn" onclick="toggleDomain(false)">No thanks</button>
+        <button id="domain-yes" class="toggle-btn active" onclick="toggleDomain(true)">Add $100</button>
+      </div>
+    </div>
+    <div class="calc-total">
+      <div>
+        <div class="calc-total-label">Year one total</div>
+        <div class="calc-sub" id="calc-breakdown">$399 setup + $100 domain + $1,188 hosting</div>
+      </div>
+      <div class="calc-total-val" id="calc-total">$1,687</div>
+    </div>
+  </div>
+</div>
+<hr class="div">
+<div class="section">
+  <div class="section-label">Value comparison</div>
+  <h2>A fraction of the typical cost.</h2>
+  <p class="sub">Most web agencies charge premium prices for features most small businesses simply don't need.</p>
+  <div class="compare-grid">
+    <div class="compare-cell header"><div class="compare-header">Provider</div></div>
+    <div class="compare-cell header"><div class="compare-header">Setup fee</div></div>
+    <div class="compare-cell header"><div class="compare-header">Monthly cost</div></div>
+    <div class="compare-cell"><div class="compare-name" style="color:#666;">Typical agency</div></div>
+    <div class="compare-cell"><div class="compare-price" style="color:#666;">$2,500</div></div>
+    <div class="compare-cell"><div class="compare-price" style="color:#666;">$350&ndash;$500</div><div class="compare-mo">per month</div></div>
+    <div class="compare-cell highlight"><div class="compare-header" style="color:#999;">DuNord Digital</div><div class="compare-savings">Save $2,100+ upfront</div></div>
+    <div class="compare-cell highlight"><div class="compare-price" style="color:#f5f5f5;">$399</div></div>
+    <div class="compare-cell highlight"><div class="compare-price" style="color:#f5f5f5;">$99</div><div class="compare-mo" style="color:#999;">per month</div></div>
+  </div>
+  <p class="savings-note">That's up to <strong>$2,100 saved on setup</strong> and <strong>$3,000+ saved per year</strong> on hosting &mdash; without sacrificing the credibility and quality your business needs to compete online.</p>
+</div>
+<hr class="div">
+<div class="section">
+  <div class="section-label">You're looking at it</div>
+  <h2>This is what we build.</h2>
+  <p class="sub">The page you're reading right now is built the same way we'd build yours &mdash; clean, fast, and professional. No bloat, no fuss.</p>
+  <div class="example-card">
+    <div class="example-bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span class="example-url">dunorddigital.com</span></div>
+    <div class="example-inner">
+      <h3>DuNord Digital</h3>
+      <p>Simple, credible, effective. Exactly what your customers need to trust you and make the call.</p>
+      <div class="example-chips">
+        <span class="chip">Services listed</span><span class="chip">Pricing info</span><span class="chip">Mobile-friendly</span><span class="chip">Contact info</span><span class="chip">Custom domain</span>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="div">
+<div class="section">
+  <div class="section-label">FAQ</div>
+  <h2>Common questions.</h2>
+  <div class="faq" style="margin-top:1.5rem;">
+    <div class="faq-item open" onclick="toggleFaq(this)"><div class="faq-q">How long does it take to get my site live? <span class="arrow">+</span></div><div class="faq-a">Most sites go live within 3&ndash;5 business days of receiving your completed intake form. If revisions are needed, we handle those quickly too.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Why is DuNord so much cheaper than other agencies? <span class="arrow">+</span></div><div class="faq-a">Most agencies charge for complexity you don't need &mdash; custom animations, e-commerce systems, blogging platforms, and ongoing strategy calls. Research consistently shows that for local service businesses, the fundamentals drive the highest ROI: a clean design, your services and pricing, a phone number, and a professional domain. Those are the things that make a customer trust you and pick up the phone. We've refined our entire process around delivering exactly those fundamentals &mdash; efficiently, and at a price that actually makes sense for a small business.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need to provide anything? <span class="arrow">+</span></div><div class="faq-a">Just fill out our short intake form &mdash; it covers your business name, services, pricing, logo (if you have one), and any photos. That's it. Takes about 10 minutes.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What if I want changes after launch? <span class="arrow">+</span></div><div class="faq-a">Small text and content updates are included in the $99/month plan &mdash; things like updating your hours, adding a service, or tweaking pricing. Larger changes such as a redesign or significant structural updates will be quoted at an hourly rate.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Can I cancel the monthly plan? <span class="arrow">+</span></div><div class="faq-a">Yes &mdash; no long-term contracts, cancel any time. If you purchased a custom domain, that stays yours. Please note that the website itself is built and maintained by DuNord Digital &mdash; site files are not transferable upon cancellation. If you'd like to continue having a website after cancelling, you're always welcome to restart the plan.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need a custom domain? <span class="arrow">+</span></div><div class="faq-a">Not required, but strongly recommended. A custom domain like YourBusiness.com looks far more professional and helps customers find you through Google. It's a one-time $100 fee &mdash; we handle all the setup.</div></div>
+  </div>
+</div>
+<div class="cta-section">
+  <h2>Ready to get online?</h2>
+  <p>Takes less than 10 minutes to get started. Live in 3&ndash;5 business days.</p>
+  <button class="btn-white">Get your website for $399 &rarr;</button>
+</div>
+<footer>
+  <p>&copy; 2026 DuNord Digital. Minneapolis, MN.</p>
+  <p>dunorddigital.com</p>
+</footer>
+<script>
+var hasDomain=true;
+function toggleDomain(val){
+  hasDomain=val;
+  document.getElementById('domain-yes').className='toggle-btn'+(val?' active':'');
+  document.getElementById('domain-no').className='toggle-btn'+(!val?' active':'');
+  var total=399+1188+(val?100:0);
+  var parts=['$399 setup'];
+  if(val)parts.push('$100 domain');
+  parts.push('$1,188 hosting');
+  document.getElementById('calc-total').textContent='$'+total.toLocaleString();
+  document.getElementById('calc-breakdown').textContent=parts.join(' + ');
+}
+function toggleFaq(el){
+  var isOpen=el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+  if(!isOpen)el.classList.add('open');
+}
+</script>
 </body>
 </html>
