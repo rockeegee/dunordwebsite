@@ -50,17 +50,19 @@ hr.div{border:none;border-top:1px solid #e8edf2;margin:0;}
 .calc-total-val{font-size:32px;font-weight:700;letter-spacing:-0.02em;color:#0d2240;}
 .calc-sub{font-size:12px;color:#999;margin-top:4px;}
 .compare-wrap{background:#0a0f1e;border-radius:16px;padding:2rem;}
-.compare-label-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:4px;}
-.compare-label-cell{padding:0.75rem 1.25rem;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4a6a85;}
-.compare-data-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-radius:8px;overflow:hidden;margin-bottom:4px;border:1px solid #1a2535;}
-.compare-cell{background:#0f1a2a;padding:1rem 1.25rem;}
-.compare-cell.hl{background:#0d2240;border:1px solid #1a6bbf;}
-.compare-name{font-size:14px;font-weight:500;color:#8ca8c5;}
-.compare-hl-name{font-size:14px;font-weight:600;color:#4A9EE0;}
-.compare-price{font-size:24px;font-weight:700;color:#8ca8c5;margin:6px 0 2px;}
-.compare-hl-price{font-size:24px;font-weight:700;color:#fff;margin:6px 0 2px;}
-.compare-mo{font-size:12px;color:#4a6a85;}
-.compare-savings{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:#1a6bbf;color:#fff;margin-top:6px;}
+.compare-table{width:100%;border-collapse:collapse;}
+.compare-table th{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4a6a85;padding:0.75rem 1.25rem;text-align:left;border-bottom:1px solid #1a2535;}
+.compare-table td{padding:1rem 1.25rem;font-size:14px;}
+.row-agency td{background:#0f1a2a;color:#8ca8c5;border-bottom:1px solid #1a2535;}
+.row-agency .price{font-size:22px;font-weight:700;color:#8ca8c5;}
+.row-agency .mo{font-size:12px;color:#4a6a85;}
+.row-dunord td{background:#0d2240;border-top:2px solid #1a6bbf;border-bottom:2px solid #1a6bbf;}
+.row-dunord td:first-child{border-left:2px solid #1a6bbf;border-radius:8px 0 0 8px;}
+.row-dunord td:last-child{border-right:2px solid #1a6bbf;border-radius:0 8px 8px 0;}
+.row-dunord .name{font-size:14px;font-weight:600;color:#4A9EE0;}
+.row-dunord .price{font-size:22px;font-weight:700;color:#fff;}
+.row-dunord .mo{font-size:12px;color:#8ca8c5;}
+.savings-badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:#1a6bbf;color:#fff;margin-top:6px;}
 .savings-note{font-size:14px;color:#8ca8c5;line-height:1.6;margin-top:1.25rem;}
 .savings-note strong{color:#4A9EE0;font-weight:600;}
 .example-card{border:1px solid #dde5ef;border-radius:12px;overflow:hidden;}
@@ -91,7 +93,9 @@ footer p{font-size:12px;color:#3a5570;}
 @media(max-width:600px){
   .hero h1{font-size:28px;}
   .steps{grid-template-columns:1fr;}
-  .compare-label-row,.compare-data-row{grid-template-columns:1fr;}
+  .compare-table thead{display:none;}
+  .compare-table tr{display:block;margin-bottom:8px;}
+  .compare-table td{display:block;}
 }
 </style>
 </head>
@@ -162,21 +166,27 @@ footer p{font-size:12px;color:#3a5570;}
   <h2>A fraction of the typical cost.</h2>
   <p class="sub">Most agencies charge for complexity local businesses simply don&rsquo;t need.</p>
   <div class="compare-wrap">
-    <div class="compare-label-row">
-      <div class="compare-label-cell">Provider</div>
-      <div class="compare-label-cell">Setup fee</div>
-      <div class="compare-label-cell">Monthly cost</div>
-    </div>
-    <div class="compare-data-row">
-      <div class="compare-cell"><div class="compare-name">Typical agency</div></div>
-      <div class="compare-cell"><div class="compare-price">$2,500</div></div>
-      <div class="compare-cell"><div class="compare-price">$350&ndash;$500</div><div class="compare-mo">per month</div></div>
-    </div>
-    <div class="compare-data-row">
-      <div class="compare-cell hl"><div class="compare-hl-name">DuNord Digital</div><div class="compare-savings">Save $2,100+ upfront</div></div>
-      <div class="compare-cell hl"><div class="compare-hl-price">$399</div></div>
-      <div class="compare-cell hl"><div class="compare-hl-price">$99</div><div class="compare-mo">per month</div></div>
-    </div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Provider</th>
+          <th>Setup fee</th>
+          <th>Monthly cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row-agency">
+          <td>Typical agency</td>
+          <td><div class="price">$2,500</div></td>
+          <td><div class="price">$350&ndash;$500</div><div class="mo">per month</div></td>
+        </tr>
+        <tr class="row-dunord">
+          <td><div class="name">DuNord Digital</div><div class="savings-badge">Save $2,100+ upfront</div></td>
+          <td><div class="price">$399</div></td>
+          <td><div class="price">$99</div><div class="mo">per month</div></td>
+        </tr>
+      </tbody>
+    </table>
     <p class="savings-note">Up to <strong>$2,100 saved on setup</strong> and <strong>$3,000+ saved per year</strong> &mdash; without sacrificing the quality your business needs to compete online.</p>
   </div>
 </div>
