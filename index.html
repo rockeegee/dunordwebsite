@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DuNord Digital — Professional websites for local businesses</title>
-<meta name="description" content="DuNord Digital builds fast, affordable one-page websites for local service businesses in Minneapolis, St. Paul, and nationwide. $399 setup, $99/month.">
+<meta name="description" content="DuNord Digital builds fast, affordable one-page websites for local service businesses in Minneapolis, St. Paul, and nationwide. $599 setup (domain included), $99/month.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#111;background:#fff;}
@@ -40,19 +40,6 @@ hr.div{border:none;border-top:1px solid #e8edf2;margin:0;}
 .step-num{font-size:11px;font-weight:700;color:#1a6bbf;letter-spacing:0.06em;margin-bottom:10px;}
 .step-title{font-size:15px;font-weight:700;margin-bottom:6px;color:#0d1f35;}
 .step-desc{font-size:13px;color:#555;line-height:1.5;}
-.calc-card{background:#fff;border:2px solid #0d1f35;border-radius:16px;padding:2rem;}
-.calc-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #e0e8f0;gap:12px;}
-.calc-label{font-size:14px;color:#333;flex-shrink:0;}
-.calc-val{font-size:14px;font-weight:700;color:#0d1f35;}
-.calc-domain-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px;flex-wrap:wrap;}
-.toggle-wrap{display:flex;border:2px solid #0d1f35;border-radius:8px;overflow:hidden;flex-shrink:0;}
-.tog{font-size:13px;padding:8px 18px;border:none;cursor:pointer;font-weight:700;}
-.tog-off{background:#fff;color:#0d1f35;}
-.tog-on{background:#1a6bbf;color:#fff;}
-.calc-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:1.5rem;padding-top:1.5rem;border-top:2px solid #1a6bbf;}
-.calc-total-label{font-size:13px;color:#555;}
-.calc-total-val{font-size:32px;font-weight:700;letter-spacing:-0.02em;color:#0d2240;}
-.calc-sub{font-size:12px;color:#999;margin-top:4px;}
 .compare-wrap{background:#0a0f1e;border-radius:16px;padding:2rem;}
 .compare-table{width:100%;border-collapse:collapse;}
 .compare-table th{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4a6a85;padding:0.75rem 1.25rem;text-align:left;border-bottom:1px solid #1a2535;}
@@ -115,10 +102,6 @@ footer p{font-size:12px;color:#3a5570;}
   .hero-proof{font-size:13px;}
   .hero-stat-row{gap:1.25rem;}
   .steps{grid-template-columns:1fr;}
-  .calc-domain-row{flex-direction:column;align-items:flex-start;gap:10px;}
-  .toggle-wrap{width:100%;}
-  .tog{flex:1;text-align:center;}
-  .calc-total{flex-direction:column;gap:6px;}
   .compare-table{display:none;}
   .compare-cards{display:block;}
 }
@@ -138,11 +121,12 @@ footer p{font-size:12px;color:#3a5570;}
     <p class="hero-pain">When someone Googles your business and finds nothing, <strong>62% of customers will move on to a competitor</strong> &mdash; without ever contacting you.</p>
     <p class="hero-proof">Businesses with a website are <strong>2.8x more likely to grow revenue</strong> and <strong>grow 40% faster than those without</strong>.</p>
     <div class="hero-btns">
-      <a href="https://buy.stripe.com/eVq5kxa0m01cfRz3MPdjO00" class="btn-blue" style="text-decoration:none;display:inline-block;">Get your website for $399 &rarr;</a>
+      <!-- TODO: Swap Stripe link to the new $599 payment link once Stripe is updated -->
+      <a href="https://buy.stripe.com/eVq5kxa0m01cfRz3MPdjO00" class="btn-blue" style="text-decoration:none;display:inline-block;">Get your website for $599 &rarr;</a>
       <button class="btn-ghost" onclick="document.querySelector('.section').scrollIntoView({behavior:'smooth'})">How it works</button>
     </div>
     <div class="hero-stat-row">
-      <div class="hero-stat"><div class="hero-stat-val">$399</div><div class="hero-stat-label">Setup fee</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">$599</div><div class="hero-stat-label">Setup &middot; domain included</div></div>
       <div class="hero-stat"><div class="hero-stat-val">$99/mo</div><div class="hero-stat-label">Hosting &amp; support</div></div>
       <div class="hero-stat"><div class="hero-stat-val">3&ndash;5 days</div><div class="hero-stat-label">Time to live</div></div>
     </div>
@@ -158,31 +142,6 @@ footer p{font-size:12px;color:#3a5570;}
     <div class="step"><div class="step-num">01 &mdash; START</div><div class="step-title">Pay &amp; check out</div><div class="step-desc">Simple online checkout. No contracts, no commitments.</div></div>
     <div class="step"><div class="step-num">02 &mdash; SHARE</div><div class="step-title">Fill out one form</div><div class="step-desc">Tell us about your business in about 10 minutes.</div></div>
     <div class="step"><div class="step-num">03 &mdash; LAUNCH</div><div class="step-title">We go live</div><div class="step-desc">We build, review, and launch within 3&ndash;5 business days.</div></div>
-  </div>
-</div>
-
-<hr class="div">
-<div class="section">
-  <div class="section-label">Pricing calculator</div>
-  <h2>See exactly what you'll pay.</h2>
-  <p class="sub">No hidden fees. Toggle the domain to fit your needs.</p>
-  <div class="calc-card">
-    <div class="calc-row"><span class="calc-label">Website setup</span><span class="calc-val">$399 one-time</span></div>
-    <div class="calc-row"><span class="calc-label">Monthly hosting &amp; support</span><span class="calc-val">$99 / month</span></div>
-    <div class="calc-domain-row">
-      <span class="calc-label">Custom domain <span style="font-size:12px;color:#999;font-weight:400;">(optional, one-time)</span></span>
-      <div class="toggle-wrap">
-        <button id="tog-no" class="tog tog-off" onclick="toggleDomain(false)">No thanks</button>
-        <button id="tog-yes" class="tog tog-on" onclick="toggleDomain(true)">Add $100</button>
-      </div>
-    </div>
-    <div class="calc-total">
-      <div>
-        <div class="calc-total-label">Year one total</div>
-        <div class="calc-sub" id="calc-breakdown">$399 setup + $100 domain + $1,188 hosting</div>
-      </div>
-      <div class="calc-total-val" id="calc-total">$1,687</div>
-    </div>
   </div>
 </div>
 
@@ -207,8 +166,8 @@ footer p{font-size:12px;color:#3a5570;}
           <td><div class="price">$350&ndash;$500</div><div class="mo">per month</div></td>
         </tr>
         <tr class="row-dunord">
-          <td><div class="name">DuNord Digital</div><div class="savings-badge">Save $2,100+ upfront</div></td>
-          <td><div class="price">$399</div></td>
+          <td><div class="name">DuNord Digital</div><div class="savings-badge">Save $1,900+ upfront</div></td>
+          <td><div class="price">$599</div><div class="mo">domain included</div></td>
           <td><div class="price">$99</div><div class="mo">per month</div></td>
         </tr>
       </tbody>
@@ -221,12 +180,13 @@ footer p{font-size:12px;color:#3a5570;}
       </div>
       <div class="compare-card dunord">
         <div class="compare-card-name">DuNord Digital</div>
-        <div class="compare-card-row"><span class="compare-card-label">Setup fee</span><span class="compare-card-val">$399</span></div>
+        <div class="compare-card-row"><span class="compare-card-label">Setup fee</span><span class="compare-card-val">$599</span></div>
+        <div class="compare-card-row"><span class="compare-card-label">Domain</span><span class="compare-card-val">Included</span></div>
         <div class="compare-card-row"><span class="compare-card-label">Monthly cost</span><span class="compare-card-val">$99/mo</span></div>
-        <div style="margin-top:10px;"><span class="savings-badge">Save $2,100+ upfront</span></div>
+        <div style="margin-top:10px;"><span class="savings-badge">Save $1,900+ upfront</span></div>
       </div>
     </div>
-    <p class="savings-note">Up to <strong>$2,100 saved on setup</strong> and <strong>$3,000+ saved per year</strong> &mdash; without sacrificing the quality your business needs to compete online.</p>
+    <p class="savings-note">Up to <strong>$1,900 saved on setup</strong> and <strong>$3,000+ saved per year</strong> &mdash; without sacrificing the quality your business needs to compete online.</p>
   </div>
 </div>
 
@@ -257,7 +217,7 @@ footer p{font-size:12px;color:#3a5570;}
     <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need to provide anything? <span class="arrow">+</span></div><div class="faq-a">Just fill out our short intake form &mdash; business name, services, pricing, logo (if you have one), and any photos. Takes about 10 minutes.</div></div>
     <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What if I want changes after launch? <span class="arrow">+</span></div><div class="faq-a">Small text and content updates are included in the $99/month plan. Larger changes like a redesign or structural updates will be quoted at an hourly rate.</div></div>
     <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Can I cancel the monthly plan? <span class="arrow">+</span></div><div class="faq-a">Yes &mdash; no long-term contracts, cancel any time. Your custom domain stays yours. Site files are not transferable upon cancellation, but you&rsquo;re always welcome to restart the plan.</div></div>
-    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need a custom domain? <span class="arrow">+</span></div><div class="faq-a">Not required, but strongly recommended. A domain like YourBusiness.com looks far more professional and helps customers find you on Google. One-time $100 fee &mdash; we handle all setup.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is a custom domain included? <span class="arrow">+</span></div><div class="faq-a">Yes &mdash; a custom domain like YourBusiness.com is included in the $599 setup at no extra cost. We register it, configure it, and connect it to your site. A professional domain looks far more credible to your customers and helps them find you on Google.</div></div>
   </div>
 </div>
 
@@ -266,7 +226,8 @@ footer p{font-size:12px;color:#3a5570;}
   <div class="cta-inner">
     <h2>Ready to get online?</h2>
     <p>Takes less than 10 minutes. Live in 3&ndash;5 business days.</p>
-    <a href="https://buy.stripe.com/eVq5kxa0m01cfRz3MPdjO00" class="btn-white" style="text-decoration:none;display:inline-block;">Get your website for $399 &rarr;</a>
+    <!-- TODO: Swap Stripe link to the new $599 payment link once Stripe is updated -->
+    <a href="https://buy.stripe.com/eVq5kxa0m01cfRz3MPdjO00" class="btn-white" style="text-decoration:none;display:inline-block;">Get your website for $599 &rarr;</a>
   </div>
 </div>
 
@@ -276,18 +237,6 @@ footer p{font-size:12px;color:#3a5570;}
 </footer>
 
 <script>
-var hasDomain=true;
-function toggleDomain(val){
-  hasDomain=val;
-  document.getElementById('tog-yes').className='tog '+(val?'tog-on':'tog-off');
-  document.getElementById('tog-no').className='tog '+(val?'tog-off':'tog-on');
-  var total=399+1188+(val?100:0);
-  var parts=['$399 setup'];
-  if(val)parts.push('$100 domain');
-  parts.push('$1,188 hosting');
-  document.getElementById('calc-total').textContent='$'+total.toLocaleString();
-  document.getElementById('calc-breakdown').textContent=parts.join(' + ');
-}
 function toggleFaq(el){
   var isOpen=el.classList.contains('open');
   document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
